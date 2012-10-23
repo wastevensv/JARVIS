@@ -4,7 +4,7 @@
 int main (int argc, char *argv[])
 {
 	char c='A';
-	char command[128];
+	char command[256];
 	printf("JARVIS> ");
 	bzero(command, sizeof(command));
 	while(c != EOF) {
@@ -12,6 +12,7 @@ int main (int argc, char *argv[])
 		switch(c) {
 			case '\n':
 				printf("Response: %s\n",command);
+				parser(command);
 				bzero(command, sizeof(command));
 				printf("JARVIS> ");
 				break;
