@@ -11,8 +11,8 @@ int main (int argc, char *argv[])
 		c = getchar();
 		switch(c) {
 			case '\n':
-				printf("Response: %s\n",command);
-				parser(command);
+				*response = parser(command);
+				printf("Response: %s\n",response);
 				bzero(command, sizeof(command));
 				printf("JARVIS> ");
 				break;
