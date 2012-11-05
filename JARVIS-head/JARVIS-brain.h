@@ -1,6 +1,9 @@
 #ifndef JARVIS-brain_H_INCLUDED
 #define JARVIS-brain_H_INCLUDED
 
-	char *parsestring(char com[]);
+	typedef char *string;
+	
+	extern string response;
+	string parsestring(string com[]);
 
 #endif

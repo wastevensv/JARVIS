@@ -9,7 +9,7 @@
     <Target>Bin</Target>
     <Language>C</Language>
     <Compiler>
-      <Compiler ctype="GccCompiler" xmlns="" />
+      <Compiler ctype="GccCompiler" />
     </Compiler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -32,5 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="main.c" />
+    <Compile Include="JARVIS-brain.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JARVIS-brain.h" />
   </ItemGroup>
 </Project>

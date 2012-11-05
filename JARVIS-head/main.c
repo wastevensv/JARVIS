@@ -1,17 +1,20 @@
 #include <stdio.h>
 #include "JARVIS-brain.h"
 
+typedef char *string;
+
 int main (int argc, char *argv[])
 {
 	char c='A';
-	char command[256];
+	string command;
+	string response;
 	printf("JARVIS> ");
 	bzero(command, sizeof(command));
 	while(c != EOF) {
 		c = getchar();
 		switch(c) {
 			case '\n':
-				*response = parser(command);
+				response = parsestring(command);
 				printf("Response: %s\n",response);
 				bzero(command, sizeof(command));
 				printf("JARVIS> ");
